@@ -10,13 +10,16 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 
 import java.util.function.Function;
 
 public class ModItems {
     public static final Item STEEL_INGOT = registerItem("steel_ingot", Item::new);
 
-
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

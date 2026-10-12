@@ -16,9 +16,14 @@ import java.util.function.Function;
 
 public class ModBlocks {
 
+    public static ResourceKey<Block> getRK(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
+
+
     public static final Block COMPOST_BLOCK = registerBlock("compost_block",
             properties -> new Block(properties.strength(0.5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.ROOTED_DIRT)));
+                    .sound(SoundType.ROOTED_DIRT)));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Cider.MOD_ID, name))));
