@@ -1,5 +1,10 @@
 {
-  "item.cider.steel_ingot": "Steel Ingot"
+  "item.cider.steel_ingot": "Steel Ingot",
+
+  "block.cider.compost_block": "Compost Block",
+
+  "creativemodetab.cider.cider_items": "Cider Mod Items",
+  "creativemodetab.cider.cider_blocks": "Cider Mod Blocks"
 
 
 

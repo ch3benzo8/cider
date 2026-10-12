@@ -1,5 +1,6 @@
 package net.ch3benzo8.cider.datagen;
 
+import net.ch3benzo8.cider.block.ModBlocks;
 import net.ch3benzo8.cider.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
@@ -14,6 +15,10 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
+        blockModelGenerators.createTrivialCube(ModBlocks.COMPOST_BLOCK);
+
+
+
 
     }
 

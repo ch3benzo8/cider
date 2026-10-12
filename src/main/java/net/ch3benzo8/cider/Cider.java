@@ -1,5 +1,7 @@
 package net.ch3benzo8.cider;
 
+import net.ch3benzo8.cider.block.ModBlocks;
+import net.ch3benzo8.cider.creativemodetab.ModCreativeModeTabs;
 import net.ch3benzo8.cider.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -23,7 +25,10 @@ public class Cider implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
+		ModCreativeModeTabs.registerModCreativeModTabs();
+
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 
 	public static Identifier id(String path) {
